@@ -2,7 +2,7 @@
 
 <?php
 
-// MySQL Server Exhaustion.
+// MySQL Server Exhaustion via POST request.
 // Many possible outcomes, such as server-crash, or spitting out unwanted errors.
 
 echo "
