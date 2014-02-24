@@ -1,6 +1,7 @@
 #!/usr/bin/php
 
 <?php
+
 /*
 
 MySQL Server Exhaustion via POST request.
